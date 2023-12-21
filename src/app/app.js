@@ -4,7 +4,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   return (
-    <SessionProvider session={session} basePath="/custom-route/api/auth">
+    <SessionProvider session={session} basePath="/pages/api/auth">
       <Component {...pageProps} />
     </SessionProvider>
   )
