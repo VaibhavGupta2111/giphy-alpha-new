@@ -2,12 +2,18 @@
 import { useState} from "react";
 import { auth } from "../firebase";
 import { sendPasswordResetEmail } from "firebase/auth";
+import { useRouter } from "next/navigation";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
+  const router = useRouter();
 
   const resetEmail = () => {
     sendPasswordResetEmail(auth, email);
+  };
+  const home = () => {
+    
+    router.push("/signin");
   };
 
   return (
@@ -52,6 +58,13 @@ export default function ForgotPassword() {
                 className="cursor-pointer disabled:opacity-40 flex w-full justify-center rounded-lg bg-black px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
               >
                 Send password reset link
+              </button>
+              <button
+                
+                onClick={() => home()}
+                className="cursor-pointer disabled:opacity-40 flex w-full justify-center rounded-lg mt-3 bg-gray-900 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+              >
+                back to login
               </button>
             </div>
           </div>
