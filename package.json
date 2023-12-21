@@ -1,0 +1,32 @@
+{
+  "name": "giphyalpha",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@giphy/js-fetch-api": "^5.2.0",
+    "@giphy/react-components": "^9.2.3",
+    "axios": "^1.6.2",
+    "deploy": "^1.0.3",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.7.1",
+    "init": "^0.1.2",
+    "login": "^0.8.0",
+    "next": "13.5.4",
+    "next-auth": "^4.24.5",
+    "next.js": "^1.0.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-paginate": "^8.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3"
+  }
+}
